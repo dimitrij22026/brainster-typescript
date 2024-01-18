@@ -1,14 +1,7 @@
-export function fibonacci(n: number): number[] {
-    if (n === 0) {
-      return []
-    } else if (n === 1) {
-      return [0]
-    } else {
-      const sequence = [0, 1]
-      for (let i = 2; i < n; i++) {
-        sequence.push(sequence[i - 1] + sequence[i - 2])
-      }
-      return sequence
-    }
+export function sumOfMultiples(multiple: number, max: number): number {
+  let sum = 0
+  for (let i = multiple; i <= max; i += multiple) {
+    sum += i
   }
-  
+  return sum
+}
